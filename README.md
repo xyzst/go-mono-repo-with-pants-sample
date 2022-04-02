@@ -41,4 +41,17 @@ $ ./clt
 $ ./server
 2022/04/02 13:48:54 server listening at [::]:50051
 2022/04/02 13:49:17 Received: world
+
+# if you used pants, run the following commands in separate terminal instances
+$ ./dist/cmd.server/bin
+2022/04/02 14:19:52 server listening at [::]:50051
+
+$ ./dist/cmd.client/bin
+2022/04/02 14:19:58 Greeting: Hello world
+
+(after second command is executed, return to the terminal instance w/ the server component)
+$ ./dist/cmd.server/bin
+2022/04/02 14:19:52 server listening at [::]:50051
+2022/04/02 14:19:58 Received: world
+
 ```
