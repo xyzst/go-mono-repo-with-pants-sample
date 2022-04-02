@@ -16,6 +16,11 @@ $ go build -o clt cmd/client/main.go
 
 ## build w/ pants
 ```text
+# protocol buffer and grpc codegen step w/ protoc
+$ protoc --go_out=./ --go_opt=paths=source_relative \
+    --go-grpc_out=./ --go-grpc_opt=paths=source_relative \
+    ./pkg/model/hello_world.proto
+
 # generate pants related metadata (only necessary if there are new go or protobuf files)
 $ PANTS_SHA=bc4cd049878fd0ee07fe0a9c84faa5cde352e75d ./pants tailor
 
