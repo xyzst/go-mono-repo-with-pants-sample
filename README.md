@@ -14,6 +14,15 @@ $ go build -o srv cmd/server/main.go
 $ go build -o clt cmd/client/main.go
 ```
 
+## build w/ pants
+```text
+# generate pants related metadata (only necessary if there are new go or protobuf files)
+$ PANTS_SHA=bc4cd049878fd0ee07fe0a9c84faa5cde352e75d ./pants tailor
+
+# build and package all components
+$ PANTS_SHA=bc4cd049878fd0ee07fe0a9c84faa5cde352e75d ./pants package ::
+```
+
 ## run
 ```text
 # if you did not use pants, run the following commands in separate terminal instances

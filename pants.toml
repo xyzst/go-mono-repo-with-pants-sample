@@ -1,0 +1,13 @@
+[GLOBAL]
+pants_version = "2.11.0rc1"
+backend_packages = [
+    "pants.backend.experimental.go",
+    "pants.backend.experimental.codegen.protobuf.go"
+]
+
+[anonymous-telemetry]
+enabled = false
+repo_id = "5ECAC44C-ACDF-4DB5-B855-1D60EDC9BB5E"
+
+[golang]
+expected_version = "1.18"
